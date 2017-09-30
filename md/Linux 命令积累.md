@@ -87,3 +87,10 @@
 
 	# 删除
 	curl -X DELETE url
+
+---
+
+### du 命令
+	
+	# 查看文件或文件夹大小
+	du -hs -m /opt
