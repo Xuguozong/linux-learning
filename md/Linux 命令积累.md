@@ -103,3 +103,5 @@
 ### yum
 	# 查看已安装的软件
 	yum list installed
+	# 查看统一软件包的多个版本
+	yum list [包名] --showduplicates | sort -r
