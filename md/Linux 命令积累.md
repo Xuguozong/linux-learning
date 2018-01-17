@@ -98,3 +98,8 @@
 ---
 ### iptables开放端口
 	iptables -I INPUT -p tcp --dport [端口号] -j ACCEPT
+
+---
+### yum
+	# 查看已安装的软件
+	yum list installed
