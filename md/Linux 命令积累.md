@@ -94,3 +94,7 @@
 	
 	# 查看文件或文件夹大小
 	du -hs -m /opt
+	
+---
+### iptables开放端口
+	iptables -I INPUT -p tcp --dport [端口号] -j ACCEPT
