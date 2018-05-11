@@ -105,3 +105,8 @@
 	yum list installed
 	# 查看统一软件包的多个版本
 	yum list [包名] --showduplicates | sort -r
+---
+### split 分割大文件
+	# 分割成100M的小文件
+	split -b 100M catalina.out
+
