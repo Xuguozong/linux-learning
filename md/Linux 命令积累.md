@@ -109,4 +109,9 @@
 ### split 分割大文件
 	# 分割成100M的小文件
 	split -b 100M catalina.out
-
+---
+### ssh服务器间免密登录
+    	# 生成秘钥
+	ssh-keygen -t rsa 
+	# 传输公钥 
+	scp ./id_rsa.pub user@ip:/home/user/.ssh/authorized_keys  确保authorized_keys的权限是664
