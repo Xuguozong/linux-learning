@@ -115,3 +115,7 @@
 	ssh-keygen -t rsa 
 	# 传输公钥 
 	scp ./id_rsa.pub user@ip:/home/user/.ssh/authorized_keys  确保authorized_keys的权限是664
+---
+### 查看进程内有多少线程
+	ps -o nlwo [pid]
+	nlwp - number of light-weight process
