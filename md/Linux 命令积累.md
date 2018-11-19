@@ -117,5 +117,14 @@
 	scp ./id_rsa.pub user@ip:/home/user/.ssh/authorized_keys  确保authorized_keys的权限是664
 ---
 ### 查看进程内有多少线程
-	ps -o nlwo [pid]
+	ps -o nlwp [pid]
 	nlwp - number of light-weight process
+---
+### 查看进程内的线程详情
+	top -H -p [pid]
+---
+### 查看linux系统的tcp连接情况
+	# overiew
+	netstat -an | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
+	# 每隔1s监控TIME_WAIT的tcp数量
+	watch -n 1 "netstat -nt | grep TIME_WAIT | wc -l"
