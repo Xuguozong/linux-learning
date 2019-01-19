@@ -128,3 +128,8 @@
 	netstat -an | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
 	# 每隔1s监控TIME_WAIT的tcp数量
 	watch -n 1 "netstat -nt | grep TIME_WAIT | wc -l"
+---
+### 查找文件
+	# find  根据文件属性进行查找，如文件名、文件大小、所有者、所属组、是否为空、访问时间、修改时间等
+	# 根据文件名  .标识当前路径
+	# find [path] -name [file name]
